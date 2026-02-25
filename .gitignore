@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Streamlit cache
+.streamlit/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# ML artifacts (do NOT push models)
+artifacts/*.pkl
+artifacts/*.joblib
+artifacts/*.json
+
+# Reports images (optional)
+reports/*.png
+
+# Jupyter
+.ipynb_checkpoints/
