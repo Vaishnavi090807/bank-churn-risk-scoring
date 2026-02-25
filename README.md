@@ -1,12 +1,10 @@
 #Bank Customer Churn – Predictive Modeling & Risk Scoring
 
-##Project Overview
+#Project Overview
 Customer churn is a major challenge for banks, as retaining existing customers is more cost-effective than acquiring new ones.  
 This project builds an **end-to-end Machine Learning pipeline** to predict customer churn and assign an interpretable risk score.
 
-This project was developed as part of my **Machine Learning Internship at Unified Mentor**.
 
----
 
 ##Project Structure
 
@@ -17,7 +15,7 @@ bank-churn-risk-scoring/
 ├── README.md                  # Project documentation
 │
 ├── data/
-│   └── European_Bank.xlsx     # Bank customer dataset (Excel)
+│   └── European_Bank.xlsx     # Bank customer dataset
 │
 ├── artifacts/
 │   └── threshold_report.csv   # Threshold tuning results
@@ -37,8 +35,6 @@ bank-churn-risk-scoring/
     ├── utils.py
     └── __init__.py
 
----
-
 ##Dataset Description
 - **Format:** Excel (`.xlsx`)
 - **Domain:** Banking
@@ -46,7 +42,7 @@ bank-churn-risk-scoring/
   - `1` → Customer churned
   - `0` → Customer retained
 
-### Key Features
+##Key Features
 - CreditScore  
 - Geography  
 - Gender  
@@ -58,16 +54,12 @@ bank-churn-risk-scoring/
 - IsActiveMember  
 - EstimatedSalary  
 
----
-
 ##Feature Engineering
 To enhance model performance, the following features were engineered:
 
 - **Balance_to_Salary** – Balance relative to customer income  
 - **Product_Density** – Number of products per year of relationship  
 - **Engagement_Product_Interaction** – Interaction between activity and products  
-
----
 
 ##Machine Learning Models
 The following models were trained and evaluated:
@@ -77,12 +69,10 @@ The following models were trained and evaluated:
 - Random Forest
 - Gradient Boosting
 
-### Model Selection Strategy
+##Model Selection Strategy
 - **Primary metric:** ROC-AUC  
 - **Secondary objective:** Reduce false positives while maintaining recall  
 - A tuned probability threshold was selected to optimize business impact.
-
----
 
 ##Model Explainability
 To ensure interpretability and transparency:
@@ -92,8 +82,6 @@ To ensure interpretability and transparency:
 - SHAP-based explanations
 
 All explainability outputs are saved in the `reports/` directory.
-
----
 
 ##Streamlit Web Application
 The interactive Streamlit app allows users to:
@@ -105,6 +93,6 @@ The interactive Streamlit app allows users to:
 - Perform what-if scenario analysis
 - Inspect top churn drivers
 
-### Run the App
+##Run the App
 ```bash
 streamlit run app.py
